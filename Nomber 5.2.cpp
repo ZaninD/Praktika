@@ -3,17 +3,18 @@
 #include <cstdio>
 using namespace std;
 
-char* registr(string str) {
-	char mas[100];
+char *registr(string str) {
+	string &s = str;
+	char b[100];
 	for (int i = 0; i < str.length(); i++) {
-		if (str[i] == 'A' || str[i] == 'O' || str[i] == 'E' || str[i] == 'Y' || str[i] == 'U' || str[i] == 'I') {
+		if (str[i] == 'O' || str[i] == 'U' || str[i] == 'I' || str[i] == 'E' || str[i] == 'A' || str[i] == 'Y') {
 			str[i] = tolower(str[i]);
 		}
 	}
 	for (int i = 0; i < str.length(); i++) {
-		mas[i] = str[i];
+		b[i] = str[i];
 	}
-	return mas;
+	return b;
 }
 
 int main() {
